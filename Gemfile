@@ -19,6 +19,10 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'devise', '~> 4.3'
 
 gem 'pry'
+gem 'paperclip', '~> 4.2'
+gem 'simple_form', '~> 3.1.0'  
+gem 'activeadmin'
+
 
 
  group :development, :test do

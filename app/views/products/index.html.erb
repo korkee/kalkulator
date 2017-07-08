@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista produktów</h1>
+<div class="jumbotron">
+<table >
+  <thead>
+    <tr class="tabelka">
+      <th> Nazwa </th>
+      <th> Kalorie </th>
+      <th> Weglowodany </th>
+      <th> Bialko </th>
+      <th> fat </th>
+      <th> Ile gram </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.calories %></td>
+        <td><%= product.carbohydrates %></td>
+        <td><%= product.protein %></td>
+        <td><%= product.fat %></td>
+        <td><%= product.weight %></td>
+        
+        <td><%= link_to ' Wyswietl ', product %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>

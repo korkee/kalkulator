@@ -1,0 +1,36 @@
+<%= form_for(@meal) do |f| %>
+  <% if @meal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meal.errors.count, "error") %> prohibited this produkty from being saved:</h2>
+
+      <ul>
+      <% @meal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :sort %><br>
+    <%= f.select(:sort,[[:breakfast, :breakfast], [:diner, :diner], [:supper, :supper]], :prompt => 'Select sort of meal') %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :products %><br>
+    <%= f.select(:product_ids, Product.all.map {|p| [ "#{p.name} C #{p.carbohydrates}, P: #{p.protein}, F: #{p.fat}", p.id ] }, 
+                                           { :prompt => "Please select products"}, 
+                                           { :multiple => true, :size => 5 }) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

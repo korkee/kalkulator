@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nazwa: MyString
+  kalorie: 1
+  weglowodany: 1
+  bialko: 1
+  tluszcze: 1
+  ile_gram: 1
+
+two:
+  nazwa: MyString
+  kalorie: 1
+  weglowodany: 1
+  bialko: 1
+  tluszcze: 1
+  ile_gram: 1

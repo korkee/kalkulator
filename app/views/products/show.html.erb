@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nazwa:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Kalorie:</strong>
+  <%= @product.calories %>
+</p>
+
+<p>
+  <strong>Weglowodany:</strong>
+  <%= @product.carbohydrates %>
+</p>
+
+<p>
+  <strong>Bialko:</strong>
+  <%= @product.protein %>
+</p>
+
+<p>
+  <strong>product:</strong>
+  <%= @product.fat %>
+</p>
+
+<p>
+  <strong>Ile gram:</strong>
+  <%= @product.weight %>
+</p>
+<% if @product.user == current_user %>
+
+<%= link_to 'Edit', edit_product_path(@product) %> 
+<% end %>
+<%= link_to 'Back', products_path %>
